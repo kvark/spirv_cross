@@ -29,15 +29,6 @@ fn main() {
     build.flag("-fno-exceptions");
     build.flag("-fno-rtti");
 
-    if std::env::var("CARGO_FEATURE_WITH_ASAN").is_ok() {
-        build.flag("-fsanitize=address");
-    }
-    if std::env::var("CARGO_FEATURE_WITH_FUZZER").is_ok() {
-        build.flag("-fsanitize=fuzzer");
-    } else if std::env::var("CARGO_FEATURE_WITH_FUZZER_NO_LINK").is_ok() {
-        build.flag("-fsanitize=fuzzer-no-link");
-    }
-
     build
         .flag("-DSPIRV_CROSS_EXCEPTIONS_TO_ASSERTIONS")
         .flag("-DSPIRV_CROSS_WRAPPER_NO_EXCEPTIONS");
