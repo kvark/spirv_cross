@@ -11,6 +11,9 @@ keywords = ["spirv", "cross"]
 build = "build.rs"
 edition = "2018"
 
+[lib]
+crate-type = ["rlib"]
+
 [features]
 default = []
 glsl = []
@@ -20,6 +23,6 @@ msl = []
 [target.'cfg(not(target_arch = "wasm32"))'.build-dependencies]
 cc = "1.0.4"
 
-[target.wasm32-unknown-unknown.dependencies]
-wasm-bindgen = "0.2.33"
-js-sys = "0.3.10"
+#[target.wasm32-unknown-unknown.dependencies]
+#wasm-bindgen = "0.2.33"
+#js-sys = "0.3.10"

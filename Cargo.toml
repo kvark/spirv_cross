@@ -3,5 +3,5 @@ members = [
     "spirv_cross",
     "examples",
     "bindings_generator",
-    "wasm"
+    #"wasm"
 ]
