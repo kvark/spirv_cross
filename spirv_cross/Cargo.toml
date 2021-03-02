@@ -1,6 +1,7 @@
+# the name has to not be a prefix to any modules!
 [package]
-name = "spirv_cross"
-version = "0.23.0"
+name = "spirv-cross-internal"
+version = "0.1.0"
 authors = ["Joshua Groves <josh@joshgroves.com>"]
 description = "Safe wrapper around SPIRV-Cross"
 license = "MIT/Apache-2.0"
@@ -21,5 +22,5 @@ msl = []
 cc = { version = "1", features = ["parallel"] }
 
 [target.wasm32-unknown-unknown.dependencies]
-wasm-bindgen = "0.2.33"
-js-sys = "0.3.10"
+#wasm-bindgen = "0.2.33"
+#js-sys = "0.3.10"

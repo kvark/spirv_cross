@@ -1,7 +1,8 @@
 [workspace]
 members = [
     "spirv_cross",
+    "spirv_cross_gecko",
     "examples",
     "bindings_generator",
-    "wasm"
+    #"wasm"
 ]

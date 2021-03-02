@@ -1,8 +1,0 @@
-[package]
-name = "wasm"
-version = "0.1.0"
-authors = ["Joshua Groves <josh@joshgroves.com>"]
-
-[[bin]]
-name = "wasm"
-path = "src/main.rs"
